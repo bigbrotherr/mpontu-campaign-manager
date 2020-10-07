@@ -23,3 +23,10 @@ font-family: 'Raleway', sans-serif; */
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
 }
+
+@media only screen and (max-width: 600px) {
+    .action {
+      margin-top: 1rem;
+      margin-left: 0rem !important;
+    }
+  }

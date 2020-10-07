@@ -39,7 +39,7 @@ export default function Navbar() {
                 </Link>
               </li>
             </ul>
-            <form className="d-flex mr-5 form">
+            <form className="d-flex  form">
               <input
                 className="form-control mr-1"
                 type="search"
@@ -51,7 +51,7 @@ export default function Navbar() {
               </button>
             </form>
             <Link to="/signup">
-              <button className="btn btn-primary action rounded" type="submit">
+              <button className="btn btn-primary action rounded ml-5" type="submit">
                 Get Started
               </button>
             </Link>
