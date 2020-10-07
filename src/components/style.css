@@ -1,32 +1,132 @@
-@import url('https://fonts.googleapis.com/css2?family=Kurale&family=Raleway:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kurale&family=Raleway:wght@400;500&display=swap");
 /* font-family: 'Kurale', serif;
 font-family: 'Raleway', sans-serif; */
 
 /************ Navbar CSS *******************/
-.logo{
-    font-family: 'Kurale', serif;
-    font-size: 2rem;
-    margin-right: 5rem;
+nav {
+  background-color: transparent !important;
 }
-.links{
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.1rem;
-    margin-right: 2rem;
+.logo {
+  font-family: "Kurale", serif;
+  font-size: 2rem;
+  margin-right: 5rem;
 }
-.links:hover{
-    color: blue !important;
+.links {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.1rem;
+  margin-right: 2rem;
 }
-.form{
-    font-family: 'Raleway', sans-serif;
+.links:hover {
+  color: blue !important;
 }
-.action{
-    font-family: 'Raleway', sans-serif;
-    font-weight: bold;
+.form {
+  font-family: "Raleway", sans-serif;
+}
+.action {
+  font-family: "Raleway", sans-serif;
+  background-color: #6c07df !important;
+  border: none !important;
+  padding: 0.5rem 2rem;
+}
+.action:hover {
+  background-color: rgb(58, 0, 124) !important;
 }
 
 @media only screen and (max-width: 600px) {
-    .action {
-      margin-top: 1rem;
-      margin-left: 0rem !important;
-    }
+  .action {
+    margin-top: 1rem;
+    margin-left: 0rem !important;
   }
+}
+
+/************ Body CSS *******************/
+.heading {
+  font-family: "Raleway", sans-serif;
+}
+.heading_child {
+  font-family: "Kurale", serif;
+  margin-top: 2.5rem;
+  font-size: 15px;
+  color: rgb(126, 124, 124);
+  font-weight: 100;
+}
+.left_container {
+  margin: 7rem 2rem;
+}
+.get_started {
+  font-family: "Raleway", sans-serif;
+  background-color: #6c07df;
+  padding: 0.5rem 2rem;
+  color: #fff;
+  margin-top: 2rem;
+}
+.get_started:hover {
+  background-color: rgb(58, 0, 124) !important;
+  color: #fff;
+}
+.main_container {
+  background-image: url(../images/blob.svg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: absolute;
+}
+@media only screen and (max-width: 600px) {
+  .left_container {
+    margin: 7rem 2rem;
+  }
+}
+
+/************ Sign up And Login CSS *******************/
+.register {
+  border: none;
+  background-color: #6c07df;
+  padding: 50px;
+  margin-top: 20px;
+  height: 35rem;
+}
+
+.register h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: rgb(255, 255, 255);
+}
+.register-form {
+  padding: 10px;
+}
+.register .btn-primary {
+  float: right;
+  border: none;
+  width: 100%;
+  background: #c7c7c7;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  margin-top: 20px;
+  padding: 10px;
+}
+.register .btn-primary:hover {
+  background: black;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-family: "Raleway", sans-serif;
+
+}
+.field {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, 0);
+  background-color: white;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 22px;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.field:hover {
+  background-color: lightgray;
+}
+.field:focus {
+  background-color: #fff;
+  border: 2px solid rgba(30, 85, 250, 0.47);
+}

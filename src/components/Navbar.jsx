@@ -5,7 +5,7 @@ import "./style.css";
 export default function Navbar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light shadow">
         <div className="container-fluid">
           <Link className="navbar-brand logo " to="/">
             Mpontu Tech
