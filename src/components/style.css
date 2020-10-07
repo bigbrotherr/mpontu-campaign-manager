@@ -211,3 +211,20 @@ hr {
   cursor: pointer;
   padding: 1.5rem;
 }
+
+/********************** Right Pane CSS *************************/
+.right_pane{
+    background-image: url(../images/dot-grid.png);
+
+}
+.right_pane p{
+font-family: 'Kurale', serif;
+font-size: 2rem;
+
+}
+.right_pane_header{
+    padding: 1rem;
+}
+.modal_form{
+    border: 1px solid #000;
+}
