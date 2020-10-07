@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Kurale&family=Raleway:wght@400;500&display=swap');
+/* font-family: 'Kurale', serif;
+font-family: 'Raleway', sans-serif; */
+
+/************ Navbar CSS *******************/
+.logo{
+    font-family: 'Kurale', serif;
+    font-size: 2rem;
+    margin-right: 5rem;
+}
+.links{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+    margin-right: 2rem;
+}
+.links:hover{
+    color: blue !important;
+}
+.form{
+    font-family: 'Raleway', sans-serif;
+}
+.action{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
