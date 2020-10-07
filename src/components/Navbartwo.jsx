@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 
-export default function Navbar() {
+export default function Navbartwo() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light shadow ">
@@ -24,12 +24,12 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link links active" aria-current="page" to="/">
+                <Link className="nav-link links link active" aria-current="page" to="/">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link links " aria-current="page" to="">
+                <Link className="nav-link link links " aria-current="page" to="">
                   Pricing
                 </Link>
               </li>
@@ -50,11 +50,7 @@ export default function Navbar() {
                 Search
               </button>
             </form>
-            <Link to="/signup">
-              <button className="btn btn-primary action rounded ml-5" type="submit">
-                Get Started
-              </button>
-            </Link>
+            
           </div>
         </div>
       </nav>

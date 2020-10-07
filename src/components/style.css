@@ -11,13 +11,14 @@ nav {
   font-size: 2rem;
   margin-right: 5rem;
 }
+
 .links {
   font-family: "Raleway", sans-serif;
   font-size: 1.1rem;
   margin-right: 2rem;
 }
 .links:hover {
-  color: blue !important;
+  color: #6c07df !important;
 }
 .form {
   font-family: "Raleway", sans-serif;
@@ -31,7 +32,15 @@ nav {
 .action:hover {
   background-color: rgb(58, 0, 124) !important;
 }
+.button_solo {
+  border-color: #6c07df !important;
+  color: #6c07df !important;
+}
 
+.button_solo:hover {
+  background-color: #6c07df !important;
+  color: #fff !important;
+}
 @media only screen and (max-width: 600px) {
   .action {
     margin-top: 1rem;
@@ -109,7 +118,6 @@ nav {
   border: none;
   color: rgb(255, 255, 255);
   font-family: "Raleway", sans-serif;
-
 }
 .field {
   width: 100%;
@@ -129,4 +137,77 @@ nav {
 .field:focus {
   background-color: #fff;
   border: 2px solid rgba(30, 85, 250, 0.47);
+}
+
+/************ Dashboard CSS *******************/
+.left_pane {
+  background-color: #6c07df;
+  align-self: center;
+  height: 36rem;
+}
+.fas {
+  background-color: #fff;
+  padding: 2rem;
+  font-size: 3rem;
+  border-radius: 50%;
+}
+.left_pane_details {
+  padding-top: 3rem;
+}
+.username {
+  font-family: "Raleway", sans-serif;
+  color: #ccc;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+hr {
+  color: #ccc;
+}
+.active_link {
+  font-family: "Raleway", sans-serif;
+  color: #ccc;
+  background-color: #380077;
+  margin: 0rem 2rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.active_link:hover {
+  font-family: "Raleway", sans-serif;
+  color: #ccc;
+  background-color: #25004e;
+  margin: 0rem 2rem;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+.pane_links {
+  font-family: "Raleway", sans-serif;
+  color: #ccc;
+  cursor: pointer;
+  padding: 1.5rem;
+  margin: 0.5rem 2rem;
+  transition: 0.5s ease-in-out;
+}
+.pane_links:hover {
+  font-family: "Raleway", sans-serif;
+  color: #ccc;
+  background-color: #5300b3;
+  cursor: pointer;
+  padding: 1.5rem;
+  margin: 0.5rem 2rem;
+}
+.logout {
+  font-family: "Raleway", sans-serif;
+  color: #ccc;
+  cursor: pointer;
+  padding: 1.5rem;
+  margin: 2rem 2rem;
+  transition: 0.5s ease-in-out;
+}
+.logout:hover {
+  font-family: "Raleway", sans-serif;
+  color: #ccc;
+  background-color: #5300b3;
+  cursor: pointer;
+  padding: 1.5rem;
 }

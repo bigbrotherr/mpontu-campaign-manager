@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
-
+import Navbartwo from "../components/Navbartwo";
+import Dashpage from '../components/Dashpage'
 export default class LandingPage extends Component {
     render() {
         return (
             <div>
-                <h1>This is the Dashboard PAge</h1>
+                <Navbartwo/>
+                <Dashpage/>
             </div>
         )
     }
