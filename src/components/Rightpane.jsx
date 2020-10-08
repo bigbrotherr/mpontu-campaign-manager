@@ -1,41 +1,73 @@
 import React, { Component } from "react";
-import Table from "./Table";
 
 export default class Rightpane extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      campaignName: "",
-      file: "",
-      date: "",
-      number: "",
+      title: "Campaign Management Dashboard",
+      act: 0,
+      index: "",
+      datas: [],
     };
   }
-
-  change = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
-  };
+  componentDidMount() {
+    this.refs.campaignName.focus();
+  }
 
   onSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
+    console.log("try");
+
+    let datas = this.state.datas;
+    let campaignName = this.refs.campaignName.value;
+    let campaignDate = this.refs.campaignDate.value;
+    let campaignFiles = this.refs.campaignFiles.value;
+
+    if (this.state.act === 0) {
+      //new
+      let data = {
+        campaignName,
+        campaignDate,
+        campaignFiles,
+      };
+      datas.push(data);
+    } else {
+      //update
+      let index = this.state.index;
+      datas[index].campaignName = campaignName;
+      datas[index].campaignDate = campaignDate;
+      datas[index].campaignFiles = campaignFiles;
+    }
+
     this.setState({
-      campaignName: "",
-      file: "",
-      date: "",
-      number: "",
+      datas: datas,
+      act: 0,
     });
+
+    this.refs.myForm.reset();
+    this.refs.campaignName.focus();
+  };
+
+  // Delete Campaigns
+  fDelete = (i) => {
+    let datas = this.state.datas;
+    datas.splice(i, 1);
+    this.setState({
+      datas: datas,
+    });
+
+    this.refs.myForm.reset();
+    this.refs.campaignName.focus();
   };
 
   render() {
+    let datas = this.state.datas;
     return (
       <div className="container-fluid right_pane">
         <div className="row right_pane_header">
           <div className="col-9">
-            <p>Dashboard</p>
+            <p>{this.state.title}</p>
           </div>
           <div className="col-3 ">
             {/* Button trigger modal  */}
@@ -73,51 +105,36 @@ export default class Rightpane extends Component {
 
                   {/********** Modal Body ********/}
                   <div className="modal-body">
-                    <form className="modal_form">
+                    <form className="modal_form" ref="myForm">
                       <input
                         className="field"
-                        name="number"
-                        type="number"
-                        placeholder="Select Number"
-                        value={this.state.number}
-                        onChange={(e) => this.change(e)}
-                        required
-                      />
-                      <input
-                        className="field"
-                        name="campaignName"
+                        ref="campaignName"
                         type="text"
                         placeholder="Enter campaign name"
-                        value={this.state.campaignName}
-                        onChange={(e) => this.change(e)}
                         required
                       />
                       <br />
                       <input
                         className="field"
-                        name="file"
-                        type="file"
-                        placeholder="Last Name"
-                        value={this.state.file}
-                        onChange={(e) => this.change(e)}
-                        required
-                      />
-                      <br />
-                      <input
-                        className="field"
-                        name="date"
                         type="date"
-                        placeholder="Username"
-                        value={this.state.date}
-                        onChange={(e) => this.change(e)}
+                        ref="campaignDate"
+                        placeholder="upload file"
+                        required
                       />
                       <br />
+                      <input
+                        className="field"
+                        type="file"
+                        ref="campaignFiles"
+                        placeholder="input date"
+                        required
+                      />
 
                       <button
                         className="btn btn-primary "
                         onClick={(e) => this.onSubmit(e)}
                       >
-                        Submit
+                        Add Campaign
                       </button>
                     </form>
                   </div>
@@ -136,7 +153,34 @@ export default class Rightpane extends Component {
           </div>
         </div>
         <div className="row right_pane_header">
-          <Table />
+          <table className="table  table-striped table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Campaign Name</th>
+                <th scope="col">Campaign Date</th>
+                <th scope="col">Files</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {datas.map((data, i) => (
+                <tr key={i}>
+                  <th scope="row">{i + 1}</th>
+                  <td>{data.campaignName}</td>
+                  <td>{data.campaignDate}</td>
+                  <td>{data.campaignFiles}</td>
+                  <td>
+                    <i
+                      class=" fa fa-trash myListButton pull-left"
+                      onClick={() => this.fDelete(i)}
+                    ></i>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     );

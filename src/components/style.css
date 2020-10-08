@@ -233,3 +233,20 @@ font-size: 2rem;
   font-family: 'Kurale', serif;
 font-size: 2rem;
 }
+.fa-trash{
+  margin-right: 2rem;
+  font-size: 1.5rem;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+.fa-trash:hover{
+  color: #ff0000;
+}
+.fa-edit{
+  font-size: 1.5rem;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+.fa-edit:hover{
+  color: #0fb300;
+}
