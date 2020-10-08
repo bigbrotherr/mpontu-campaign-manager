@@ -1,13 +1,15 @@
 import React, { Component } from "react";
+import Table from "./Table";
 
 export default class Rightpane extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      campaign: "",
-      date: "",
+      campaignName: "",
       file: "",
+      date: "",
+      number: "",
     };
   }
 
@@ -21,11 +23,13 @@ export default class Rightpane extends Component {
     e.preventDefault();
     console.log(this.state);
     this.setState({
-      campaign: "",
-      date: "",
+      campaignName: "",
       file: "",
+      date: "",
+      number: "",
     });
   };
+
   render() {
     return (
       <div className="container-fluid right_pane">
@@ -72,43 +76,43 @@ export default class Rightpane extends Component {
                     <form className="modal_form">
                       <input
                         className="field"
-                        name="Campaign Name"
-                        type="text"
-                        placeholder="enter campaign name"
-                        value={this.state.username}
+                        name="number"
+                        type="number"
+                        placeholder="Select Number"
+                        value={this.state.number}
                         onChange={(e) => this.change(e)}
+                        required
                       />
-
-                      <br />
                       <input
-                        className="field datepicker"
-                        // data-date-format="mm/dd/yyyy"
-                        name="date"
-                        type="date"
-                        placeholder="select date"
-                        value={this.state.date}
+                        className="field"
+                        name="campaignName"
+                        type="text"
+                        placeholder="Enter campaign name"
+                        value={this.state.campaignName}
                         onChange={(e) => this.change(e)}
                         required
                       />
                       <br />
                       <input
+                        className="field"
+                        name="file"
                         type="file"
-                        class="form-file-input"
-                        id="customFile"
+                        placeholder="Last Name"
+                        value={this.state.file}
+                        onChange={(e) => this.change(e)}
+                        required
                       />
-                      <div className="form-file">
-                        <input
-                          value={this.state.file}
-                          type="file"
-                          className="form-file-input"
-                          id="customFile"
-                          onChange={(e) => this.change(e)}
-                        />
-                        <label className="form-file-label" for="customFile">
-                          <span className="form-file-text">Choose file...</span>
-                          <span className="form-file-button">Browse</span>
-                        </label>
-                      </div>
+                      <br />
+                      <input
+                        className="field"
+                        name="date"
+                        type="date"
+                        placeholder="Username"
+                        value={this.state.date}
+                        onChange={(e) => this.change(e)}
+                      />
+                      <br />
+
                       <button
                         className="btn btn-primary "
                         onClick={(e) => this.onSubmit(e)}
@@ -130,6 +134,9 @@ export default class Rightpane extends Component {
               </div>
             </div>
           </div>
+        </div>
+        <div className="row right_pane_header">
+          <Table />
         </div>
       </div>
     );
