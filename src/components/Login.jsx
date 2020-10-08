@@ -55,7 +55,7 @@ class Form extends Component {
               <Link to="/dashboard">
                 <button
                   className="btn btn-primary "
-                  onClick={(e) => this.onSubmit(e)}
+                  // onClick={(e) => this.onSubmit(e)}
                 >
                   Submit
                 </button>
